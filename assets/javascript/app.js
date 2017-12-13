@@ -10,7 +10,12 @@ function run() {
 // function to decrement number variable by 1
 function decrement() {
 number--;
+
+// display the counter on the game page
+$("#gameClock").html("<h1>" + number + "<h21");
 }
+// timer starts when start button clicked
+$("#start").on("click", run);
 
 // global variables
 // trivia game questions
@@ -21,6 +26,5 @@ number--;
 // on-click action for start button
 // function to end the game
 
-// timer starts when start button clicked
 // show results, display correct answers, incorrect answers, and number of unanswered questions
 // code for check boxes
