@@ -1,8 +1,8 @@
 /* background for game */
+body {
+  background-image: url("../../assets/images/bones.jpg");
+}
 
 /* styling for title */
 
 /* button style */
-#start {
-
-}

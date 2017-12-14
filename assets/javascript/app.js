@@ -44,42 +44,43 @@ function stop() {
 var questions= [
   {
     question1: "Metatarsals and phalanges are found in which part of the body?",
-    answers: ["Foot", "Hand", "Knee"],
+    answer1: ["Foot", "Hand", "Knee"],
     Correct: 0
   },
   {
     question2: "A bone is joined to a muscle by which structure?",
-    answers: ["Ligament", "Vein", "Tendon"],
+    answer2: ["Ligament", "Vein", "Tendon"],
     correct: 2
   },
 
   {
     question3: "What is the largest bone in the body?",
-    answers:["Spine", "Humerus", "Femur"],
+    answer3:["Spine", "Humerus", "Femur"],
     correct: 2
   },
   {
     question4: "Which protein forms hair and nails?",
-    answers: ["Casein", "Keratin", "Ferritin"],
+    answer4: ["Casein", "Keratin", "Ferritin"],
     correct: 1
   },
   {
     question5: "How many bones are in the human body?", 
-    answers: ["206", "175", "310"],
+    answer5: ["206", "175", "310"],
     correct: 0
   },
   {
     question6: "What is the anatomical name for the kneecap?", 
-    answers: ["Condyle", "Patella", "Tibia"],
+    answer6: ["Condyle", "Patella", "Tibia"],
     correct: 1
   },
   {
     question7: "What’s the smallest bone in the body?",
-    answers: ["Coccyx", "Lunate", "Stapes"],
+    answer7: ["Coccyx", "Lunate", "Stapes"],
     correct: 2
   }
 ]
 
+$(".question").text(question1);
 // for loop for questions
 for(var i=0; i<questions.length; i++){
 
