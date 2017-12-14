@@ -13,6 +13,7 @@ var intervalId;
 function run() { 
   $("#start").hide();
   intervalId = setInterval(decrement, 1000);
+
 }
 
 // function to decrement number variable by 1
@@ -43,46 +44,55 @@ function stop() {
 // trivia game questions
 var questions= [
   {
-    question1: "Metatarsals and phalanges are found in which part of the body?",
-    answer1: ["Foot", "Hand", "Knee"],
+    question: "Metatarsals and phalanges are found in which part of the body?",
+    answer: ["Foot", "Hand", "Knee"],
     Correct: 0
   },
   {
-    question2: "A bone is joined to a muscle by which structure?",
-    answer2: ["Ligament", "Vein", "Tendon"],
+    question: "A bone is joined to a muscle by which structure?",
+    answer: ["Ligament", "Vein", "Tendon"],
     correct: 2
   },
 
   {
-    question3: "What is the largest bone in the body?",
-    answer3:["Spine", "Humerus", "Femur"],
+    question: "What is the largest bone in the body?",
+    answer:["Spine", "Humerus", "Femur"],
     correct: 2
   },
   {
-    question4: "Which protein forms hair and nails?",
-    answer4: ["Casein", "Keratin", "Ferritin"],
+    question: "Which protein forms hair and nails?",
+    answer: ["Casein", "Keratin", "Ferritin"],
     correct: 1
   },
   {
-    question5: "How many bones are in the human body?", 
-    answer5: ["206", "175", "310"],
+    question: "How many bones are in the human body?", 
+    answer: ["206", "175", "310"],
     correct: 0
   },
   {
-    question6: "What is the anatomical name for the kneecap?", 
-    answer6: ["Condyle", "Patella", "Tibia"],
+    question: "What is the anatomical name for the kneecap?", 
+    answer: ["Condyle", "Patella", "Tibia"],
     correct: 1
   },
   {
-    question7: "What’s the smallest bone in the body?",
-    answer7: ["Coccyx", "Lunate", "Stapes"],
+    question: "What’s the smallest bone in the body?",
+    answer: ["Coccyx", "Lunate", "Stapes"], //*****change answers to single lines, answer 1, 2, etc...***************
     correct: 2
   }
 ]
+// display questions on html page
 
-$(".question").text(question1);
+
 // for loop for questions
 for(var i=0; i<questions.length; i++){
+$(".question").text(questions [i].question);
+console.log(questions[i].question);
+
+
+for(var j=0; j < questions[i].answer.length; j++){
+$(".answers").append(questions[i].answer[j]);   // *******remove answer for loop************
+
+} //this is telling it how many times to go thru loop
 
 //if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
 
