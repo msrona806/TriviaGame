@@ -80,18 +80,15 @@ var questions= [
   }
 ]
 
+// for loop for questions
 for(var i=0; i<questions.length; i++){
 
+//if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
 
 }
-// var questions = [,   
 
-// game answers
-// for loop for questions
-// logic to compare answers to questions
-// function to start the game
+// append totals to score div in html
 
 // function to end the game
 
 // show results, display correct answers, incorrect answers, and number of unanswered questions
-// code for check boxes
