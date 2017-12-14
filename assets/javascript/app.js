@@ -13,9 +13,24 @@ var intervalId;
 function run() { 
   $("#start").hide();
   intervalId = setInterval(decrement, 1000);
-
+ displayQuestion(0);
 }
 
+function displayQuestion(index) {
+  var questionObj = questions[index];
+
+  $(".question").text(questionObj.question);
+  console.log(questionObj.question);
+
+  
+
+  for(var i=0; i < questionObj.answer.length; i++) {
+    $(".answers").append(questionObj.answer[i]);
+    console.log(questionObj.answer[i]);
+  }
+  
+
+}
 // function to decrement number variable by 1
 function decrement() {
 number--;
@@ -84,19 +99,13 @@ var questions= [
 
 
 // for loop for questions
-for(var i=0; i<questions.length; i++){
-$(".question").text(questions [i].question);
-console.log(questions[i].question);
 
 
-for(var j=0; j < questions[i].answer.length; j++){
-$(".answers").append(questions[i].answer[j]);   // *******remove answer for loop************
 
-} //this is telling it how many times to go thru loop
+
+//this is telling it how many times to go thru loop
 
 //if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
-
-}
 
 // append totals to score div in html
 
