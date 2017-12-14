@@ -22,8 +22,7 @@ if (number === 0) {
   
   //run stop function and display an alert
   stop();
-  
-}
+  }
 }
 // when start button clicked:
 
@@ -44,9 +43,6 @@ var questionsObjects = [
     answers: ["abb", "ffd", "fsds"],
     Correct: "abb"
   },
-  {
-    next one
-  }
 ]
 
 
