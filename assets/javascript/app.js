@@ -1,5 +1,9 @@
 $(document).ready (function() {
-// global variables
+
+  // global variables
+var correct=0;
+var wrong=0;
+var incomplete=0;
 
 // timer to count down seconds left to answer questions, starts at 60
 var number = 5;
@@ -28,25 +32,59 @@ if (number === 0) {
 
 $("#start").click(run);
 
-
-// function to stop the counter **NOT WORKING**
+// function to stop the counter 
 function stop() {
   clearInterval(intervalId);
   alert("Time's up!!!");
 }
 
 });
+
 // trivia game questions
-var questionsObjects = [
+var questions= [
   {
-    question: "This is a question",
-    answers: ["abb", "ffd", "fsds"],
-    Correct: "abb"
+    question1: "Metatarsals and phalanges are found in which part of the body?",
+    answers: ["Foot", "Hand", "Knee"],
+    Correct: 0
   },
+  {
+    question2: "A bone is joined to a muscle by which structure?",
+    answers: ["Ligament", "Vein", "Tendon"],
+    correct: 2
+  },
+
+  {
+    question3: "What is the largest bone in the body?",
+    answers:["Spine", "Humerus", "Femur"],
+    correct: 2
+  },
+  {
+    question4: "Which protein forms hair and nails?",
+    answers: ["Casein", "Keratin", "Ferritin"],
+    correct: 1
+  },
+  {
+    question5: "How many bones are in the human body?", 
+    answers: ["206", "175", "310"],
+    correct: 0
+  },
+  {
+    question6: "What is the anatomical name for the kneecap?", 
+    answers: ["Condyle", "Patella", "Tibia"],
+    correct: 1
+  },
+  {
+    question7: "What’s the smallest bone in the body?",
+    answers: ["Coccyx", "Lunate", "Stapes"],
+    correct: 2
+  }
 ]
 
+for(var i=0; i<questions.length; i++){
 
-var questions = ["Which parts of the body are formed by the bones of the metatarsals and phalanges?", "A bone is joined to a muscle by which structure?", "What is the biggest bone in the body?", "Which protein forms hair and nails?", "What’s the smallest bone in the body?", "How many bones are in the human body?", "Which joint type is found at your shoulder and hip?", "What is the anatomical name for the knee bone?", "Which of these bones is the cheek bone?"]
+
+}
+// var questions = [,   
 
 // game answers
 // for loop for questions
