@@ -12,7 +12,21 @@ header {
 }
 
 /* button style */
+.start {
+  background: grey;
+  padding: 30px;
+  align-content: center;
+  opacity: .70;
+}
+.question {
+  clear: both;
+}
 
-start {
-  float: center;
+.totals {
+  clear: right;
+  border: 2px dotted grey;
+  font-family: comic;
+  font-size: 24px;
+
+
 }

@@ -11,7 +11,7 @@ var intervalId;
 
 // function to run the counter, decreases by 1 every second
 function run() { 
-  $("#start").hide(); //hides start button
+  $(".start").hide(); //hides start button
   intervalId = setInterval(decrement, 1000);
   displayQuestion(0); //show first question
 }
@@ -46,13 +46,16 @@ if (number === 0) {
 }
 // when start button clicked:
 
-$("#start").click(run);
+$(".start").click(run);
 
 // function to stop the counter 
 function stop() {
   clearInterval(intervalId);
   alert("Time's up!!!");
 }
+$("#ansCorrect").append(correct);
+$("#ansWrong").append(wrong);
+$("#blank").append(incomplete);
 
 });
 
@@ -95,6 +98,7 @@ var questions= [
     correct: 2
   }
 ]
+
 
 //if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
 
