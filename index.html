@@ -6,10 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Trivia Game</title>
  
-</head>
-  <!-- css links -- >
-  <link rel="stylesheet" href= "assets/css/reset.css">
-  <link rel="stylesheet" href= "assets/css/style.css"> 
+  <!-- css links -->
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css"> 
   
   <!-- jQuery library link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,22 +19,31 @@
 
 <body>
   
-  <div id="gameClock"></div>
+  <header>Bones of the Body Trivia</header>
+    
+    <div class="container">
+      <div class="row">
 
-  <br>
-  
-  <button id="start" class= "btn primary btn-lg">Start Game</button>
+        <div id="gameClock"></div>
 
-  <!-- Questions -->
-  <div class="question" style="display: block"></div>
-  <div class="answers"></div>
-  <input type="radio">
-  
-  <!-- Score Totals -->
-  <div id="ansCorrect">Correct Answers: </div>
-  <div id="ansWrong">Incorrect Answers: </div>
-  <div id="blank">Unanswered: </div>
-  
+        <br>
+        
+        <button id="start" class= "btn primary btn-lg">Start Game</button>
+
+        <!-- Questions -->
+        <div class="question" style="display: block"></div>
+        <div class="answers"></div>
+        <input type="radio">
+        
+        <!-- Score Totals -->
+        <div class="totals">
+          <div id="ansCorrect">Correct Answers: </div>
+          <div id="ansWrong">Incorrect Answers: </div>
+          <div id="blank">Unanswered: </div>
+        </div>    
+      </div>
+    </div>
+    
   <!-- javascript file link -->
   <script src="assets/javascript/app.js"></script>
 </body>

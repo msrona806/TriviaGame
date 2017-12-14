@@ -1,8 +1,18 @@
 /* background for game */
 body {
-  background-image: url("../../assets/images/bones.jpg");
+  background-image: url("../images/bones.jpg");
 }
 
 /* styling for title */
+header {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bolder;
+  font-family: comic;
+}
 
 /* button style */
+
+start {
+  float: center;
+}

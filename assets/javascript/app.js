@@ -11,26 +11,26 @@ var intervalId;
 
 // function to run the counter, decreases by 1 every second
 function run() { 
-  $("#start").hide();
+  $("#start").hide(); //hides start button
   intervalId = setInterval(decrement, 1000);
- displayQuestion(0);
+  displayQuestion(0); //show first question
 }
 
+// function to display question
 function displayQuestion(index) {
   var questionObj = questions[index];
 
+// show question in html
   $(".question").text(questionObj.question);
   console.log(questionObj.question);
 
-  
-
+// loop questions and answers
   for(var i=0; i < questionObj.answer.length; i++) {
     $(".answers").append(questionObj.answer[i]);
     console.log(questionObj.answer[i]);
   }
-  
-
 }
+
 // function to decrement number variable by 1
 function decrement() {
 number--;
@@ -60,7 +60,7 @@ function stop() {
 var questions= [
   {
     question: "Metatarsals and phalanges are found in which part of the body?",
-    answer: ["Foot", "Hand", "Knee"],
+    answer: ["Foot ", "Hand ", "Knee "],
     Correct: 0
   },
   {
@@ -91,19 +91,10 @@ var questions= [
   },
   {
     question: "What’s the smallest bone in the body?",
-    answer: ["Coccyx", "Lunate", "Stapes"], //*****change answers to single lines, answer 1, 2, etc...***************
+    answer: ["Coccyx", "Lunate", "Stapes"],
     correct: 2
   }
 ]
-// display questions on html page
-
-
-// for loop for questions
-
-
-
-
-//this is telling it how many times to go thru loop
 
 //if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
 
