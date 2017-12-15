@@ -17,16 +17,24 @@ header {
   padding: 30px;
   align-content: center;
   opacity: .70;
+  height: 500px;
 }
 .question {
   clear: both;
 }
 
 .totals {
+  display: hide;
   clear: right;
   border: 2px dotted grey;
   font-family: comic;
   font-size: 24px;
+}
 
-
+.quest {
+  background: lightyellow;
+  font-size: 18px;
+  opacity: .65;
+  float: left;
+  height: 500px;
 }

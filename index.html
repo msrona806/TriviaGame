@@ -7,7 +7,7 @@
   <title>Trivia Game</title>
  
   <!-- css links -->
-  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css"> 
   
   <!-- jQuery library link -->
@@ -32,18 +32,22 @@
         <div class = "col-sm-2">
           <div id="gameClock"></div></div>
           <!-- Questions -->
-        <div class="col-sm-6 question" style="display: block">
+          <div class="col-sm-10 quest">
+          <div class="question" style="display: block"></div>
           <div class="answers"></div>
         </div>
+      </div>
 
           <!-- Score Totals -->
-        <div class="col-sm-4 totals">
-          <div id="ansCorrect">Correct Answers: </div>
-          <div id="ansWrong">Incorrect Answers: </div>
-          <div id="blank">Unanswered: </div>
-        </div>
+        <div class="row">
+          <div class="col-sm-4 totals">
+            <div id="ansCorrect">Correct Answers: </div>
+            <div id="ansWrong">Incorrect Answers: </div>
+            <div id="blank">Unanswered: </div>
+          </div>
       </div>
-    </div>    
+    </div> 
+  </div>   
       
   <!-- javascript file link -->
   <script src="assets/javascript/app.js"></script>

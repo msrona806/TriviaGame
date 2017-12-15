@@ -1,12 +1,13 @@
 $(document).ready (function() {
 
+
   // global variables
 var correct=0;
 var wrong=0;
 var incomplete=0;
 
 // timer to count down seconds left to answer questions, starts at 60
-var number = 5;
+var number = 2;
 var intervalId; 
 
 // function to run the counter, decreases by 1 every second
@@ -28,8 +29,8 @@ function displayQuestion(index) {
   for(var i=0; i < questionObj.answer.length; i++) {
     $(".answers").append(questionObj.answer[i]);
     console.log(questionObj.answer[i]);
-  }
-}
+  };
+};
 
 // function to decrement number variable by 1
 function decrement() {
@@ -53,6 +54,9 @@ function stop() {
   clearInterval(intervalId);
   alert("Time's up!!!");
 }
+
+
+// append totals to score div in html
 $("#ansCorrect").append(correct);
 $("#ansWrong").append(wrong);
 $("#blank").append(incomplete);
@@ -101,8 +105,6 @@ var questions= [
 
 
 //if statement needed to compare user answer to correct answer. If user answer is correct, correct counter increases by 1 and alert pops up that says "Good Job!" . If user answer is incorrect, wrong counter increases by 1 and alert pops up that says "That's not right!". If question is not answered, incomplete increases by 1.
-
-// append totals to score div in html
 
 // function to end the game
 
