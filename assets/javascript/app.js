@@ -5,8 +5,8 @@ $(document).ready (function() {
 var correct=0;
 var wrong=0;
 var incomplete=0;
-var MAXTIME = 2
- QAindex = 0; // global variables
+var MAXTIME = 5
+QAindex = 0; // global variables
 
 // timer to count down seconds left to answer questions, starts at 60
 var number = MAXTIME;
@@ -18,6 +18,11 @@ function run() {
   $(".question").empty(); // clears questions after it has been answered
   $(".answers").empty();
 
+  // append totals to score div in html
+  $("#ansCorrect").append(correct);
+  $("#ansWrong").append(wrong);
+  $("#blank").append(incomplete);
+  
   intervalId = setInterval(decrement, 1000);
   displayQuestion(QAindex); //show first question
 }
@@ -53,10 +58,14 @@ $("body").on("click",".answerItem", function(){
   if (clickedItemText === correctAnswer) {
     correct++;
   }
+  else if (number === 0) {
+    incomplete++;
+    displayQuestion();
+  }
   else {
     wrong++;
   }
-  run()
+  run();
   
 })
 
@@ -67,10 +76,11 @@ number--;
 // display the counter on the game page
 $("#gameClock").html("<h1>" + number + "<h1>");
 
-if (number === 0) {
+if (number === -1) {
   
   //run stop function and display an alert
   stop();
+  QAindex++;
   }
 }
 // when start button clicked:
@@ -81,14 +91,7 @@ $(".start").click(run);
 function stop() {
   clearInterval(intervalId);
   alert("Time's up!!!");
-}
-
-
-// append totals to score div in html
-$("#ansCorrect").append(correct);
-$("#ansWrong").append(wrong);
-$("#blank").append(incomplete);
-
+  }
 });
 
 // trivia game questions
