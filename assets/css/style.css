@@ -23,6 +23,10 @@ header {
   clear: both;
 }
 
+.questionKey {
+  border: 2px solid red;
+}
+
 .totals {
   display: hide;
   clear: right;
