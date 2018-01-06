@@ -1,2 +1,2 @@
 # TriviaGame
-Trivia game for week 3, Thursday homework.
+Trivia game created using HTML, CSS, and Javascript.
